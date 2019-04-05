@@ -23,5 +23,5 @@ let pages url i =
 
 [<EntryPoint>]
 let main argv =
-    pages "https://habr.com/all/page" 100
+    pages "https://habr.com/all/page" 10
     0
