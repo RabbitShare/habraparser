@@ -17,13 +17,13 @@ let appendLines file strs =
 let pages url i =
     [ 1 .. i ]
     |> Seq.iter ^ fun x -> 
-        url + string x 
+        url + string x
         |> HtmlDocument.Load
         |> getTitels
-        |> PSeq.map ^ fun x -> match x with (a,b) -> sprintf "%s\n   %s" a b 
+        |> PSeq.map ^ fun x -> match x with (a,b) -> sprintf "%s\n   %s" a b
         |> appendLines "file.txt"
 
 [<EntryPoint>]
 let main argv =
-    pages "https://habr.com/all/page" 10
+    pages "https://habr.com/all/page" 10 
     0
